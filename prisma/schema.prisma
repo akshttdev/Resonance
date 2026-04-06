@@ -4,8 +4,7 @@
 // Get a free hosted Postgres database in seconds: `npx create-db`
 
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -64,7 +63,7 @@ model Generation {
   topP              Float
   topK              Int
   repitionPenalty   Float
-  
+
   createdAt         DateTime     @default(now())
   updatedAt         DateTime     @updatedAt
 
